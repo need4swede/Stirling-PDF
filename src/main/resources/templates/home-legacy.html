@@ -24,6 +24,7 @@
       <script th:src="@{'/js/homecard-legacy.js'}"></script>
       <div class=" container">
         <br>
+        <!--SELFHOST_REMOVAL_OPEN_TAG
         <span class="material-symbols-rounded search-icon">
           search
         </span>
@@ -51,9 +52,11 @@
             dashboard
           </span>
         </div>
+        SELFHOST_REMOVAL_CLOSE_TAG-->
 
         <div class="features-container">
 
+          <!--SELFHOST_REMOVAL_OPEN_TAG
           <div th:if="${@shouldShow}" class="feature-card favorite update-notice" id="update-link"
             style="display: none;">
             <a href="https://github.com/Stirling-Tools/Stirling-PDF/releases" target="_blank" rel="noopener">
@@ -68,9 +71,12 @@
               </div>
             </a>
           </div>
+          SELFHOST_REMOVAL_CLOSE_TAG-->
+
 
           <div id="groupFavorites" class="feature-group-legacy">
-            <div th:replace="~{fragments/featureGroupHeaderLegacy :: featureGroupHeader(groupTitle=#{navbar.favorite})}">
+            <div
+              th:replace="~{fragments/featureGroupHeaderLegacy :: featureGroupHeader(groupTitle=#{navbar.favorite})}">
             </div>
             <div class="feature-group-container">
             </div>
@@ -248,7 +254,8 @@
           </div>
 
           <div id="groupView" class="feature-group-legacy">
-            <div th:replace="~{fragments/featureGroupHeaderLegacy :: featureGroupHeader(groupTitle=#{navbar.sections.edit})}">
+            <div
+              th:replace="~{fragments/featureGroupHeaderLegacy :: featureGroupHeader(groupTitle=#{navbar.sections.edit})}">
             </div>
             <div class="feature-group-container">
               <div
@@ -345,6 +352,7 @@
 
 
   <!-- Survey Modal -->
+  <!--SELFHOST_REMOVAL_OPEN_TAG
   <div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="surveyModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -377,9 +385,11 @@
       </div>
     </div>
   </div>
+  SELFHOST_REMOVAL_CLOSE_TAG-->
 
 
   <!-- Analytics Modal -->
+  <!--SELFHOST_REMOVAL_OPEN_TAG
   <div class="modal fade" id="analyticsModal" tabindex="-1" role="dialog" aria-labelledby="analyticsModalLabel"
     aria-hidden="true" th:if="${@analyticsPrompt}">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -406,6 +416,7 @@
       </div>
     </div>
   </div>
+    SELFHOST_REMOVAL_CLOSE_TAG-->
 
 
 
@@ -513,7 +524,7 @@
     function setAsDefault(value) {
       localStorage.setItem('defaultView', value);
       console.log(`Default view set to: ${value}`);
-      }
+    }
   </script>
 
 
